@@ -5,7 +5,7 @@ const number = document.getElementById("number")
 const attemptsText = document.getElementById("attempts-text")
 const npcNumber = document.getElementById("npc-number")
 
-let LightAttemps = 2
+let LightAttemps = 3
 let initailNumber = 0
 
 
@@ -25,17 +25,17 @@ aditionNumber.addEventListener("click",()=>{
 thermometerButton.addEventListener("click",()=>{
     if (LightAttemps > 0){
         LightAttemps -= 1
-        attemptsText.textContent = `Te quedan ${LightAttemps} usos del termometro`
+        attemptsText.textContent = `Te quedan ${LightAttemps} usos del semaforo`
       
         let diferentionPlus =  gameNumber - initailNumber
         let diferentionLess = initailNumber - gameNumber
-        if (diferentionLess < 21 && diferentionLess > 0|| diferentionPlus < 21 && diferentionPlus > 0){
+        if (diferentionLess < 11 && diferentionLess > 0|| diferentionPlus < 11 && diferentionPlus > 0){
             number.style.color = "Green"
         }
         else if(diferentionLess < 31 && diferentionLess > 0|| diferentionPlus < 31 && diferentionPlus > 0){
             number.style.color = "Yellow"
         }
-        else if(diferentionLess < 41 && diferentionLess > 0|| diferentionPlus < 41 && diferentionPlus > 0){
+        else if(diferentionLess < 51 && diferentionLess > 0|| diferentionPlus < 51 && diferentionPlus > 0){
             number.style.color = "Red"
         }
 
@@ -48,7 +48,7 @@ guessButton.addEventListener("click",()=>{
     let diferentionPlus =  gameNumber - initailNumber
     let diferentionLess = initailNumber - gameNumber
     npcNumber.textContent = gameNumber
-        if (diferentionLess < 11 && diferentionLess > 0|| diferentionPlus < 11 && diferentionPlus > 0){
+        if (diferentionLess < 6 && diferentionLess > 0|| diferentionPlus < 6 && diferentionPlus > 0){
             attemptsText.textContent = "Ganaste"   
         } 
         else {

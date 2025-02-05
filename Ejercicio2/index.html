@@ -10,24 +10,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="background"></div>
     <h1>Adivina el numero</h1>
-    <section class="rules">
-        <h2>Reglas</h2>
-        <p>Adivina el numero sin pasarte, tendras un margen de 10 numeros, el numero sera del 1 al 100, podras usar el boton de "Termometro" para saber si estas cerca, podras ir sumando numeros con el boton de sumar, no puedes restar numeros, una vez que te decidas presiona el boton "Adivinar"</p>
-        <p>Rojo: hay una diferencia mayor de 50 numeros</p>
-        <p>Amarillo: hay una diferencia mayor de 30 numeros</p>
-        <p>hay una diferencia menor o igual de 30</p>
-      
-    </section>
+  
     <main>
-        <h2>Tu numero:</h2>
-        <h3 id="number">0</h3>
+        <div class="number-players">
+            <h2>Tu numero:</h2>
+            <h2>Npc numero:</h2>
+            <h3 id="number">0</h3>
+            
+            <h3 id="npc-number">?</h3>
+        </div>
+        
         <div class="button-area">
             <button id="adition-button" class="adition-button">Sumar </button>
             <button id="termometro-button" class="termometro-button">Termometro</button>
             <button id="guess-button" class="guess-button">Adivinar</button>
+            <p id="attempts-text">Te quedan 2 usos del termometro</p>
         </div>
     </main>
+    <section class="rules">
+        <h2>Reglas</h2>
+        <p>Adivina el numero sin pasarte, tendras un margen de 10 numeros, el numero que tendras que adivinar sera del 1 al 100, podras usar el boton de "Termometro" para saber si estas cerca, podras ir sumando numeros con el boton de sumar, no puedes restar numeros, una vez que te decidas presiona el boton "Adivinar"</p>
+        <p><span>Rojo:</span> hay una diferencia menor de 40 numeros</p>
+        <p><span>Amarillo:</span> hay una diferencia menor de 30 numeros</p>
+        <p><span>Verde:</span> hay una diferencia menor o igual de 20</p>
+      
+    </section>
+    
    <script src="app.js"></script>
 </body>
 </html>

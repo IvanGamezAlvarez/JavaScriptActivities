@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Termometro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Adivina el numero</h1>
+    <section class="rules">
+        <h2>Reglas</h2>
+        <p>Adivina el numero sin pasarte, tendras un margen de 10 numeros, el numero sera del 1 al 100, podras usar el boton de "Termometro" para saber si estas cerca, podras ir sumando numeros con el boton de sumar, no puedes restar numeros, una vez que te decidas presiona el boton "Adivinar"</p>
+        <p>Rojo: hay una diferencia mayor de 50 numeros</p>
+        <p>Amarillo: hay una diferencia mayor de 30 numeros</p>
+        <p>hay una diferencia menor o igual de 30</p>
+      
+    </section>
+    <main>
+        <h2>Tu numero:</h2>
+        <h3 id="number">0</h3>
+        <div class="button-area">
+            <button id="adition-button" class="adition-button">Sumar </button>
+            <button id="termometro-button" class="termometro-button">Termometro</button>
+            <button id="guess-button" class="guess-button">Adivinar</button>
+        </div>
+    </main>
+   <script src="app.js"></script>
+</body>
+</html>

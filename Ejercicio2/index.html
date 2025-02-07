@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego del Semaforo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="background"></div>
-    <h1>Adivina el numero</h1>
-  
+    <button id="back-button" class="back-button">Back</button>
+
+    <h1>Guess the number</h1>
+
     <main>
         <div class="number-players">
-            <h2>Tu numero:</h2>
-            <h2>Npc numero:</h2>
+            <h2>Your number</h2>
+            <h2>Npc number</h2>
             <h3 id="number">0</h3>
-            
+
             <h3 id="npc-number">?</h3>
         </div>
-        
+
         <div class="button-area">
-            <button id="adition-button" class="adition-button">Sumar </button>
-            <button id="termometro-button" class="termometro-button">Semaforo</button>
-            <button id="guess-button" class="guess-button">Adivinar</button>
-            <p id="attempts-text">Te quedan 3 usos del semaforo</p>
+            <button id="addition-button" class="addition-button">Add </button>
+            <button id="thermometer-button" class="thermometer-button">Traffic light</button>
+            <button id="guess-button" class="guess-button">Guess</button>
+            <p id="attempts-text">You have 3 uses of the traffic light left</p>
         </div>
     </main>
+    <div class="close-area">
+        <button id="retry-button" class="retry-button">Restart</button>
+    </div>
     <section class="rules">
-        <h2>Reglas</h2>
-        <p>Adivina el numero sin pasarte, tendras un margen de 5 numeros, el numero que tendras que adivinar sera del 1 al 100, podras usar el boton de "Semaforo" para saber si estas cerca, podras ir sumando numeros con el boton de sumar, no puedes restar numeros, una vez que te decidas presiona el boton "Adivinar"</p>
-        <p><span>Rojo:</span> hay una diferencia menor de 50 numeros</p>
-        <p><span>Amarillo:</span> hay una diferencia menor de 30 numeros</p>
-        <p><span>Verde:</span> hay una diferencia menor o igual de 10</p>
-      
+        <h2>Rules</h2>
+        <p>Guess the number without going over, you will have a margin of 5 numbers, the number you will have to guess
+            will be from 1 to 100, you can use the "Traffic Light" button to know if you are close, you can add numbers
+            with the add button, you cannot subtract numbers, once you decide press the "Guess" button</p>
+        <p><span>Red:</span> There is a difference of less than 50 numbers</p>
+        <p><span>Yellow:</span> There is a difference of less than 30 numbers</p>
+        <p><span>Green:</span> There is a difference of less than or equal to 10</p>
+        
     </section>
-    
-   <script src="app.js"></script>
+
+    <p class="credits">Created by Ivan Gamez</p>
+    <script src="app.js"></script>
 </body>
+
 </html>

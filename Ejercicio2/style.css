@@ -7,24 +7,37 @@ body{
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    font-family:   "Roboto", serif;;
+    font-family: "Roboto", serif;;
     margin: 0;
     padding: 0;
 }
 
 .background{
-    position:absolute; 
     
-    background-color: aqua;
-    height: 100%;
+    position: absolute;
+    inset: 0;
+    margin: 1.5rem auto;
+    background-color: rgba(153, 153, 153, 0.329);
+    backdrop-filter: blur(10px);
+    height: 74rem;
+    width: 60rem;
+    z-index: -1;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 10px 2px rgba(8, 8, 43, 0.459);
+
 }
 
 h1{
+    font-family: "Gloria Hallelujah", serif;
+    font-weight: 400;
+    
     margin-top: 4rem;
+    margin-bottom: 0rem;
     text-align: center;
     text-transform: uppercase;
     color: white;
     font-size: 3rem;
+    
 
 }
 
@@ -32,20 +45,23 @@ h1{
 
 main{
     width: 40rem;
-    margin:  2rem auto;
-
-   
-
+    margin:  0rem auto;
     h2{
+        font-family: "Gloria Hallelujah", serif;
+        font-weight: 400;
         font-size: 2.5rem;
         text-align: center;
         text-transform: uppercase;
         margin: 1rem 0;
+        color: black;
     }
     h3{
+        font-family: "Gloria Hallelujah", serif;
+        font-weight: 400;
         margin: 1rem 0;
         font-size: 3rem;
         text-align: center;
+        color: blcak;
     }
     .button-area{
         display: grid;
@@ -63,7 +79,13 @@ main{
             border: 0px solid black;
             width: 80%;
             margin: 0 auto;
-            box-shadow: 0px 2px 10px 2px rgb(49, 49, 54);
+            box-shadow: 0px 2px 10px 2px rgb(34, 34, 66);
+            transition: .5s;
+            &:hover{
+               
+                
+                background-color: rgb(206, 178, 22);
+            }
         }
         .guess-button{
             display: block;
@@ -71,11 +93,14 @@ main{
             width: 90%;
         }
         p{
+            font-family: "Gloria Hallelujah", serif;
+            font-weight: 400;
             color: white;
-            font-size: 2rem;
+            font-size: 1.5rem;
             text-align: center;
             grid-column: span 2;
             font-weight: 700;
+            
         }
     }
     .number-players{
@@ -86,12 +111,32 @@ main{
    
 }
 
+
+.close-area{
+    display: flex;
+    justify-content: center;
+    .retry-button{
+        height: 3rem;
+        background-color: rgb(255, 52, 52);
+        color: white;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: 0px solid black;
+        width: 10rem;
+        margin: 2rem auto;
+        box-shadow: 0px 2px 5px 2px rgba(34, 34, 66, 0.767);        transition: .5s;
+            &:hover{
+              
+                background-color: rgb(199, 43, 43);
+                
+            }
+    }
+}
 .rules{
     background-color: #fd67b9;
-    box-shadow: 0px 10px 10px 5px rgb(49, 49, 54);
-
-    
-    width: 40rem;
+    box-shadow: 0px 2px 5px 2px rgba(34, 34, 66, 0.767);    
+    width: 50rem;
     margin:  2rem auto;
     padding: 3px 0;
     border-radius: 1rem;
@@ -109,7 +154,39 @@ main{
         text-align: center;
     }
     span{
+        font-size: 1.4rem;
         font-weight: 800;
         color: white;
     }
+}
+
+.credits{
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: right;
+    margin: 4rem 4rem;
+}
+
+.back-button{
+    position: fixed;
+    left: 2rem;
+    top: 1rem;
+    height: 3rem;
+    width: 10rem;
+    background-color: rgb(194, 118, 169);
+    color: white;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 0px solid black;
+    height: 3rem;
+    box-shadow: 0px 2px 5px 2px rgba(34, 34, 66, 0.767);
+    transition: .5s;
+        &:hover{
+          
+            background-color: rgb(255, 255, 255);
+            color: gray;
+
+        }
 }

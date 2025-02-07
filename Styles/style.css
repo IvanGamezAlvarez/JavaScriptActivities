@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: "Jersey 15", serif;
+    font-weight: 400;
+    font-size: 10rem;
+    text-transform: uppercase;
+    span{
+        display: block;
+    }
+    
+
+}

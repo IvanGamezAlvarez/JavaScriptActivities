@@ -175,7 +175,6 @@ main{
     height: 3rem;
     width: 10rem;
     background-color: rgb(194, 118, 169);
-    color: white;
     border-radius: 6px;
     font-size: 1rem;
     font-weight: 600;
@@ -186,7 +185,13 @@ main{
         &:hover{
           
             background-color: rgb(255, 255, 255);
-            color: gray;
 
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            &:hover{
+            color: gray;
+    
         }
 }

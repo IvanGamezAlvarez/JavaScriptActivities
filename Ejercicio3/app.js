@@ -6,6 +6,7 @@ const numberOfCards = 13
 const numberOfSymbols = 4
 let lastCard
 
+
 let oldCardsIndexs = []
 
 function MakeSymbol(symbol) {
@@ -24,11 +25,9 @@ function MakeSymbol(symbol) {
 
 }
 
-function VerifyCard(number, symbol) {
+function VerifyCard(newCard) {
 
-
-
-
+    return  oldCardsIndexs.includes(newCard)
 }
 
 
@@ -36,33 +35,46 @@ function RegisterCard(card) {
     oldCardsIndexs.unshift(card)
 }
 
-function GetARandomCard() {
 
-    if (lastCard) {
-        
 
-    } else {
-        let newNumber = Math.floor(Math.random() * (numberOfCards  ) +1) ;
-        let newSymbol = Math.floor(Math.random() * (numberOfSymbols  ) +1)  ;
-
-        let newCard = newNumber + " " + MakeSymbol(newSymbol)
-        RegisterCard(newCard)
-        return newCard
+function ValidateCard(state, beforeCard){
+    lastCardSplitted = lastCard.split(" ")
+    beforeCardSplitted = beforeCard.split(" ")
+    let newState = lastCard[1] >= beforeCard[1]
+    if( state  == newState){
+        score += 1
+        alert(`Adivinaste tu nuevo puntaje es de ${score}`)
     }
+    else{
+        alert("Perdiste")
 
-
+    }
+    alert(newState)
+    
 }
 
 
-function GuessCard() {
-    const nextCard = prompt('La siguiente carta sera "Mayor o Menor" escriba su respuesta')
-    if (nextCard == "Mayor"){
-        score += 1
-        alert(`Adivinaste tu puntaje es de ${score}`)
 
+function GetARandomCard() {
+
+        let newNumber = Math.floor(Math.random() * (numberOfCards  ) +1) ;
+        let newSymbol = Math.floor(Math.random() * (numberOfSymbols  ) +1)  ;
+        let newCard = newNumber + " " + MakeSymbol(newSymbol)
+        
+        lastNumber = newNumber
+        lastCard = newCard
+        RegisterCard(newCard)
+        return newCard
+
+}
+
+function GuessCard(oldCard) {
+    const nextCard = prompt('La siguiente carta sera "Mayor o Menor" escriba su respuesta')
+    GetARandomCard()
+    if (nextCard == "Mayor"){
+        ValidateCard(true, oldCard)
     } else if (nextCard == "Menor"){
-        score += 1
-        alert(`Adivinaste tu puntaje es de ${score}`)
+        ValidateCard(false, oldCard)
 
     } else{
         alert(`${nextCard}  no es un comando valido asegurate de haber escrito "Mayor" o "Menor"`)
@@ -73,10 +85,10 @@ function GuessCard() {
 
 function StartGame() {
     let newCard = GetARandomCard()
-    
-    while (score  < 9) {
+    alert(`La carta fue ${newCard}`)
+    while (score  < scoreToWin) {
+        GuessCard(lastCard)
         alert(`La carta fue ${newCard}`)
-        GuessCard()
         newCard = GetARandomCard()
     }
 }

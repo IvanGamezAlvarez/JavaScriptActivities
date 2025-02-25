@@ -18,15 +18,10 @@ function MakeSymbol(symbol) {
         return "Clover"
     } else if (symbol == "4") {
         return "Spade"
-    }  else{
-        return "" +symbol
-    }
-
-
+    }  
 }
 
 function VerifyCard(newCard) {
-
     return  oldCardsIndexs.includes(newCard)
 }
 
@@ -36,60 +31,59 @@ function RegisterCard(card) {
 }
 
 
+function GetARandomCard() {
+    let newNumber = Math.floor(Math.random() * (numberOfCards  ) +1) ;
+    let newSymbol = Math.floor(Math.random() * (numberOfSymbols  ) +1)  ;
+    let newCard = newNumber + " " + MakeSymbol(newSymbol)
+    
+    lastNumber = newNumber
+    lastCard = newCard
+    RegisterCard(newCard)
+    return newCard
+
+}
+
 
 function ValidateCard(state, beforeCard){
-    lastCardSplitted = lastCard.split(" ")
+    const newCard = GetARandomCard()
+    newCardSplitted = newCard.split(" ")
     beforeCardSplitted = beforeCard.split(" ")
-    let newState = lastCard[1] >= beforeCard[1]
-    if( state  == newState){
+
+    
+    let newState = parseInt(newCardSplitted[1]) > parseInt(beforeCardSplitted[1])
+    alert(`la carta anterior fue ${parseInt(beforeCardSplitted[1])} la carta nueva fue  ${parseInt(newCardSplitted[1])} el estado que mandaste fue ${state} y el estado que due es ${newState}`)
+    if(parseInt(newCardSplitted[1]) == parseInt(beforeCardSplitted[1])){
+        alert(`La carta fue del mismo valor, la carta nueva fue ${newCard}`)
+    }
+    else if( state  == newState){
         score += 1
-        alert(`Adivinaste tu nuevo puntaje es de ${score}`)
+        alert(`Adivinaste tu nuevo puntaje es de ${score}, la carta nueva fue ${newCard}`)
     }
     else{
-        alert("Perdiste")
-
+        alert(`Perdiste, la carta nueva fue ${newCard}`)
     }
-    alert(newState)
-    
 }
 
 
 
-function GetARandomCard() {
-
-        let newNumber = Math.floor(Math.random() * (numberOfCards  ) +1) ;
-        let newSymbol = Math.floor(Math.random() * (numberOfSymbols  ) +1)  ;
-        let newCard = newNumber + " " + MakeSymbol(newSymbol)
-        
-        lastNumber = newNumber
-        lastCard = newCard
-        RegisterCard(newCard)
-        return newCard
-
-}
-
-function GuessCard(oldCard) {
-    const nextCard = prompt('La siguiente carta sera "Mayor o Menor" escriba su respuesta')
-    GetARandomCard()
+function GuessCard(newCard) {
+    const nextCard = prompt(`La siguiente carta sera "Mayor o Menor" escriba su respuesta, la carta anterior fue ${newCard}`)
     if (nextCard == "Mayor"){
-        ValidateCard(true, oldCard)
+        ValidateCard(true, newCard)
     } else if (nextCard == "Menor"){
-        ValidateCard(false, oldCard)
+        ValidateCard(false, newCard)
 
     } else{
         alert(`${nextCard}  no es un comando valido asegurate de haber escrito "Mayor" o "Menor"`)
         GuessCard()
     }
-
 }
 
 function StartGame() {
     let newCard = GetARandomCard()
-    alert(`La carta fue ${newCard}`)
+
     while (score  < scoreToWin) {
-        GuessCard(lastCard)
-        alert(`La carta fue ${newCard}`)
-        newCard = GetARandomCard()
+        GuessCard(lastCard)        
     }
 }
 

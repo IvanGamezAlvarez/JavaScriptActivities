@@ -1,18 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game: Guess the next card</title>    
+    <title>Game: Guess the next card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&family=Noto+Sans+Thai+Looped:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Styles/style.css">
 </head>
-<body>
-    <main class = "main-background">
-        <h1>Card fortune teller</h1>
-        <h2>Instructions:</h2>
-        <p>A card will be shown later, you have to guess if that card is higher or lower than the previous one. You win if you guess 10 cards consecutively without making a mistake, remember the cards cannot be repeated.</p>
-        <script src="app.js"></script>
-    </main>
 
+<body>
+    <main>
+
+        <nav class="scores" id="scores">
+            <h2>Attemps: 0000</h2>
+            <h2>Best Score: 0000</h2>
+        </nav>
+        <div class="table">
+            <div class="card-record"></div>
+            <div class="game-area">
+                <h1>Card Fortune Teller</h1>
+                <div class="card-area"></div>
+                <div class="button-area">
+                    <button class="button-lower">Lower</button>
+                    <button class="button-equal">Equal</button>
+                    <button>Higher</button>
+                </div>
+            </div>
+        </div>
+        <section class="foot-options">
+            <button>Try Again</button>
+            <h3>Instructions <a href=""></a></h3>
+            <p>Created by Ivan Gamez</p>
+        </section>
+    </main>
+    <section class="rules">
+        <h2>How to play</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, modi mollitia, vero tenetur autem iusto vitae tempora, asperiores quas quo esse! Ratione deserunt tempora temporibus illo et! Consequatur, eos quod!</p>
+    </section>
+    <section class="leaderboard">
+        <h2>Leaderboard</h2>
+        <div class="username-section">
+            <h3>Username</h3>
+            <div class="username-players"></div>
+        </div>
+        <div class="score-section">
+            <h3>Score</h3>
+            <div class="score-players"></div>
+        </div>
+        <p><span>Note:</span>  This leaderbord only work of local way</p>
+    </section>
+        <!-- <script src="app.js"></script> -->
+        
+        
 </body>
+
 </html>

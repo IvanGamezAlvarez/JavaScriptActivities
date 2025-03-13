@@ -1,10 +1,42 @@
 body{
-    background-color: rgb(88, 25, 25);
+margin: 0;
+font-family: "Koulen", sans-serif;
+    
+}
+main{
+    background-color:rgb(88, 25, 25) ;
+}
+main h2{
+    
     color: white;
-
+}
+.table{
+    background-color: rgb(25, 88, 57);
+    height: 40rem;
+    width: 70%;
+    margin: auto;
+    border-radius: 400px;
+    border: 35px solid rgb(159, 118, 72);
+    
+}
+.table .card-record{
+    height: 7rem;
+}
+.table .game-area{
+    margin:0  auto;
+    height: 60%;
+    width: 80%;
+    border-radius: 400px;
+    background-color: rgb(15, 72, 44);
+    border: 10px solid white;
+}
+h1{
+    margin: 0;
+    font-size: 64px;
+    font-weight: 100;
+    text-align: center;
+    opacity: 50%;
+    color: white;
+    
 }
 
-
-.main-background{
-    background-color: rgb(88, 25, 25);
-}

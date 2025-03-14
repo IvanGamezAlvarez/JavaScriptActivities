@@ -1,42 +1,75 @@
-body{
-margin: 0;
-font-family: "Koulen", sans-serif;
-    
+body {
+  margin: 0;
+  font-family: "Koulen", sans-serif;
+  font-weight: 100;
 }
-main{
-    background-color:rgb(88, 25, 25) ;
-}
-main h2{
-    
-    color: white;
-}
-.table{
-    background-color: rgb(25, 88, 57);
-    height: 40rem;
-    width: 70%;
-    margin: auto;
-    border-radius: 400px;
-    border: 35px solid rgb(159, 118, 72);
-    
-}
-.table .card-record{
-    height: 7rem;
-}
-.table .game-area{
-    margin:0  auto;
-    height: 60%;
-    width: 80%;
-    border-radius: 400px;
-    background-color: rgb(15, 72, 44);
-    border: 10px solid white;
-}
-h1{
-    margin: 0;
-    font-size: 64px;
-    font-weight: 100;
-    text-align: center;
-    opacity: 50%;
-    color: white;
-    
+main {
+  background-color: rgb(88, 25, 25);
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+nav h2 {
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+.table {
+  background-color: rgb(25, 88, 57);
+  height: 50rem;
+  min-width: 50rem;
+  max-width: 100rem;
+  width: 70%;
+  margin: auto;
+  border-radius: 400px;
+  border: 35px solid rgb(159, 118, 72);
+}
+.table .card-record {
+  height: 15%;
+}
+.table .game-area {
+  margin: 0 auto;
+  height: 70%;
+  width: 80%;
+  border-radius: 400px;
+  background-color: rgb(15, 72, 44);
+  border: 10px solid white;
+}
+h1 {
+  height: 15%;
+  margin: 0;
+  font-size: 60px;
+  text-align: center;
+  opacity: 50%;
+  color: white;
+}
+.card-area {
+  background-color: white;
+  height: 60%;
+}
+.button-area {
+  height: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-area button {
+  width: 10%;
+  height: 80%;
+}
+.foot-options {
+  display: flex;
+  justify-content: space-between;
+}
+.rules {
+  background-color: rgb(25, 88, 57);
+}
+.leaderboard {
+  background-color: rgb(159, 118, 72);
+}
+.leaderboard h2 {
+  background-color: rgb(122, 84, 42);
+  color: rgb(198, 151, 100);
+}
